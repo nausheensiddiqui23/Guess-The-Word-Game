@@ -24,3 +24,26 @@ if (!inputElement.value) {
         alert("Empty Input box. Please add input letter");
         return;
     }
+        let letter = inputElement.value.toLowerCase();
+  inputElement.value = "";
+   if (guessedlist.includes(letter)) {
+        alert("You have already guessed that letter!");
+        return;
+    }
+         let updatedDisplay = "";
+    let allLettersGuessed = true;
+    for (let i = 0; i < selectedWord.length; i++) {
+        if (guessedlist.includes(selectedWord[i])) {
+            updatedDisplay += selectedWord[i] + " ";
+        } else {
+            updatedDisplay += "_ ";
+            allLettersGuessed = false;
+        }
+    }
+    document.getElementById("displayWord")
+        .textContent = updatedDisplay;
+guessedlist.push(letter);
+if (allLettersGuessed) {
+        alert("Congratulations! You guessed the word correctly!");
+    }
+}

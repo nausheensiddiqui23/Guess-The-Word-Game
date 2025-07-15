@@ -29,3 +29,6 @@ input {
     text-align: center;
     margin-left: 2%;
 }
+#displayWord {
+    font-size: xx-large;
+}
