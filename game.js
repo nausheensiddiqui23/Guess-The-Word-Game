@@ -12,4 +12,22 @@ let guessedLetters = [];
 let remainingAttempts = 6;
 let displayWord = [];
 let score = 0;
-
+function startGame() {
+  const randomWord = wordList[Math.floor(Math.random() * wordList.length)];
+  selectedWord = randomWord.word;
+  hint = randomWord.hint;
+  guessedLetters = [];
+  remainingAttempts = 6;
+  displayWord = Array(selectedWord.length).fill("_");
+  updateDisplay();
+}
+function updateDisplay() {
+  document.getElementById("word").textContent = displayWord.join(" ");
+  document.getElementById("attempts").textContent = "Attempts left: " + remainingAttempts;
+  document.getElementById("guessed").textContent = "Guessed: " + (guessedLetters.join(", ") || "-");
+  document.getElementById("hint").innerHTML = `<strong>Hint:</strong> ${hint}`;
+  document.getElementById("score").textContent = `Score: ${score}`;
+  document.getElementById("message").textContent = "";
+  document.getElementById("letterInput").value = "";
+  document.getElementById("wordInput").value = "";
+}
