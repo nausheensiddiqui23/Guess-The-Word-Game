@@ -31,3 +31,28 @@ function updateDisplay() {
   document.getElementById("letterInput").value = "";
   document.getElementById("wordInput").value = "";
 }
+function guessLetter() {
+  const input = document.getElementById("letterInput");
+  const letter = input.value.toLowerCase();
+  input.value = "";
+
+  if (!letter.match(/[a-z]/i) || guessedLetters.includes(letter)) {
+    alert("Please enter a valid and unused letter.");
+    return;
+  }
+
+   guessedLetters.push(letter);
+
+  if (selectedWord.includes(letter)) {
+    for (let i = 0; i < selectedWord.length; i++) {
+      if (selectedWord[i] === letter) {
+        displayWord[i] = letter;
+      }
+    }
+  } else {
+     remainingAttempts--;
+  }
+
+  updateDisplay();
+  checkGameStatus();
+}
