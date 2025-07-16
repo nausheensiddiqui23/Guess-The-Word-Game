@@ -6,3 +6,10 @@ const wordList = [
   { word: "school", hint: "Place to learn" },
   { word: "winter", hint: "Cold season" }
 ];
+let selectedWord = "";
+let hint = "";
+let guessedLetters = [];
+let remainingAttempts = 6;
+let displayWord = [];
+let score = 0;
+
