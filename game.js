@@ -71,3 +71,13 @@ if (wordGuess === selectedWord) {
     checkGameStatus();
   }
 }
+function checkGameStatus() {
+  if (displayWord.join("") === selectedWord) {
+    score++;
+    document.getElementById("message").textContent = "🎉 You Win!";
+    disableInputs();
+  } else if (remainingAttempts <= 0) {
+    document.getElementById("message").textContent = `😢 You Lost! The word was "${selectedWord}".`;
+    disableInputs();
+  }
+}
