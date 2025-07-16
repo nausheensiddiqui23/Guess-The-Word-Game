@@ -56,3 +56,18 @@ function guessLetter() {
   updateDisplay();
   checkGameStatus();
 }
+function guessFullWord() {
+  const wordGuess = document.getElementById("wordInput").value.toLowerCase();
+if (wordGuess === selectedWord) {
+    displayWord = selectedWord.split("");
+    score++;
+    document.getElementById("message").textContent = "🎉 Correct! You guessed the word!";
+    updateDisplay();
+    disableInputs();
+  } else {
+    remainingAttempts--;
+    document.getElementById("message").textContent = "❌ Incorrect full word guess!";
+    updateDisplay();
+    checkGameStatus();
+  }
+}
