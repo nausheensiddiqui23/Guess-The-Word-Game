@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Guess the Word</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Guess the Word</h1>
-    <p id="word-display">_ _ _ _</p>
-    <input type="text" id="letter-input" maxlength="1" placeholder="Enter a letter">
-    <button onclick="guessLetter()">Guess</button>
-    <p>Guessed Letters: <span id="guessed-letters"></span></p>
-    <p>Remaining Attempts: <span id="remaining-attempts">6</span></p>
-    <p id="message"></p>
-    <button onclick="resetGame()">Play Again</button>
-  </div>
-
-  <script src="game.js"></script>
+    <div class="game-box">
+        <h1>Guess the word</h1>
+        <div id="score">Score: 0</div>
+        <div id="hint"><strong>Hint:</strong></div>
+        
+    </div>
 </body>
 </html>
