@@ -81,3 +81,14 @@ function checkGameStatus() {
     disableInputs();
   }
 }
+function disableInputs() {
+  document.getElementById("letterInput").disabled = true;
+  document.getElementById("wordInput").disabled = true;
+}
+function resetGame() {
+  document.getElementById("letterInput").disabled = false;
+  document.getElementById("wordInput").disabled = false;
+  startGame();
+}
+window.onload = startGame;
+
