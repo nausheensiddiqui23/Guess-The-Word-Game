@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f9fc;
+  background-color: #ba661c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 .game-box {
-  background-color: #ffffff;
+  background-color: #cce82d;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -17,7 +17,24 @@ body {
 }
 h1 {
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 30px;
+  color: green;
+  font-family: cursive;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  80% {
+    transform: translateY(-8px);
+  }
 }
 #score {
   font-size: 18px;
@@ -36,7 +53,7 @@ h1 {
 
 input[type="text"]  {
 padding: 10px;
-font-size: 16px;
+font-size: 10px;
 margin: 5px;
 width: 80%;
 max-width: 200px;
