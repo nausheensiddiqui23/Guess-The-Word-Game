@@ -6,3 +6,17 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+.game-container {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#letter-input {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+}
