@@ -11,7 +11,17 @@
         <h1>Guess the word</h1>
         <div id="score">Score: 0</div>
         <div id="hint"><strong>Hint:</strong></div>
-        
+        <div id="word">_ _ _ _</div>
+        <input type="text" id="letterInput" maxlength="1" placeholder="Letter A-Z">
+    <button onclick="guessLetter()">Guess Letter</button>
+ <input type="text" id="wordInput" placeholder="Guess the full word">
+    <button onclick="guessFullWord()">Guess Word</button>
+
+     <div id="attempts">Attempts left: 6</div>
+    <div id="guessed">Guessed: -</div>
+    <div id="message"></div>
+    <button onclick="resetGame()">Play Next Word</button>
+
     </div>
 </body>
 </html>
