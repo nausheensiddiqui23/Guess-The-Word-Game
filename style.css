@@ -28,3 +28,15 @@ h1 {
   color: #444;
   margin-bottom: 15px;
 }
+#word {
+  font-size: 26px;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]  {
+padding: 10px;
+font-size: 16px;
+margin: 5px;
+width: 80%;
+}
